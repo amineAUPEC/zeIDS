@@ -11,5 +11,10 @@ services:
     command: tail -f /dev/null
     ports: 
     # - 8888:80
-    - "8888:8888"
+      - "8888:8888"
     #src_host_port/dest_container_port
+#     networks:
+#       - monreseau
+
+# networks: 
+#   monreseau:
