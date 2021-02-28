@@ -10,7 +10,7 @@ git commit -m "$1"
 
 # git commit -a "$1"
 
-git push -u origin main --force
+git push -u origin master --force
 
 
 # git remote set-url origin https://github.com/amineAUPEC/zeIDS.git
