@@ -1,0 +1,25 @@
+version: '3'
+services:
+  gazellejenkins:
+    build:
+      context: .
+      dockerfile: ./gazellejenkins.Dockerfile
+    working_dir: /var/www/html
+    volumes:
+      - /c/work_ids/zeIDS/GazelleJENKINS/jsonplugins:/ourdata2
+      - /c/work_ids/zeIDS:/ourdata
+    command: tail -f /dev/null
+    ports: 
+    - 8888:80
+    #src_host_port/dest_container_port
+  jenkins:
+    image: jenkins/jenkins:lts
+    privileged: true
+    user: root
+    ports:
+      - 8083:8080
+      - 50003:50000
+    container_name: my-jenkins-3
+    volumes:
+      - ~/jenkins_data:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock

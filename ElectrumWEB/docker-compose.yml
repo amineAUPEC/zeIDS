@@ -1,0 +1,14 @@
+version: '3'
+services:
+  electrumweb:
+    build:
+      context: .
+      dockerfile: ./electrum.Dockerfile
+    working_dir: /var/www/html
+    volumes:
+      - /c/work_ids/zeIDS/ElectrumWEB/webcodes:/var/www/html
+      - /c/work_ids/zeIDS:/ourdata
+    command: tail -f /dev/null
+    ports: 
+    - 8888:80
+    #src_host_port/dest_container_port
