@@ -5,7 +5,7 @@ ZeIDS of Vitry
 
 
 # configure git bash env
-# mkdir -p C/work_ids/ && git clone this repo
+mkdir -p C/work_ids/ && git clone this repo
 
 
 
