@@ -1,0 +1,6 @@
+---
+- name: "Exec testrole.yml and creating dir at /tmp"
+  file:
+    path: /tmp/TestingDirAnsible
+    state: directory
+    recurse: yes

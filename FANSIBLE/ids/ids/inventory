@@ -1,0 +1,18 @@
+[local]
+localhost ansible_connection=local
+
+
+[AlligatorToon]
+AlligatorToon
+
+
+
+[Burstinatrix]
+Burstinatrix
+
+
+
+[Clayman]
+Clayman
+
+

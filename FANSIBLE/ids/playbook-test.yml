@@ -1,0 +1,10 @@
+---
+- name: "test playbook"
+  hosts: "{{ target_env | default('local') }}"
+  vars: 
+  
+    var1: "test"
+    var2: "je teste"
+  roles: 
+    - role: testrole
+      name: testrole
