@@ -10,5 +10,6 @@ services:
       - /c/work_ids/zeIDS:/ourdata
     command: tail -f /dev/null
     ports: 
-    - 8888:80
+    # - 8888:80
+    - "8888:8888"
     #src_host_port/dest_container_port
