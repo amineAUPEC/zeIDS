@@ -1,6 +1,18 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
+# FROM ubuntu:16.04
 
-RUN apt-get update && apt-get install -y openssh-server vim python net-tools telnet python-pip
+# RUN apt-get update && apt-get install -y openssh-server vim python net-tools telnet python-pip
+# RUN apt-get update && apt-get install -y openssh-server vim python3 net-tools telnet python3-pip
+# RUN apt-get update && apt-get install -y openssh-server vim python3 net-tools telnet python3-pip
+# RUN DEBIAN_FRONTEND=noninteractive \
+#     TZ=Asia \
+#     apt-get update && apt-get install -y openssh-server vim python3 net-tools telnet python3-pip
+
+ENV TZ=Europe/Paris
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+# RUN  apt-get update && apt-get install -y openssh-server vim python3 net-tools telnet python3-pip python-pip
+RUN  apt-get update && apt-get install -y openssh-server vim python net-tools telnet  python3-pip
+# RUN apt-get update && apt-get install -y openssh-server
 
 
 # FROM alpine:3.12
@@ -29,9 +41,9 @@ CMD ["/usr/sbin/sshd", "-D"]
 WORKDIR /var/www/html
 #run to be done by ansible of Python start
 # RUN pip install --upgrade pip
-# RUN pip install -r requirements.txt 
+RUN pip3 install -r requirements.txt 
 
-# RUN python main.py --address='0.0.0.0' à lancer sur le serveur
+RUN python main.py --address='0.0.0.0' à lancer sur le serveur
 
 #run to be done by ansible of Python end
 
