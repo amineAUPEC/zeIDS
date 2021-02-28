@@ -1,2 +1,32 @@
 ssh-keygen -t rsa -b 4096
 
+docker run -it containeros bash 
+docker run -it containeros bash -d
+
+
+
+docker ps
+
+
+docker system prune
+
+docker pull hello-world
+
+docker image rm [OPTIONS] IMAGE [IMAGE...]
+docker info
+
+docker exec -ti ID_RETOURNÉ_LORS_DU_DOCKER_RUN bash
+
+docker stop [OPTIONS] CONTAINER [CONTAINER...]
+You can specify one or more containers to stop. The only option for docker stop is -t (–time) which allows you to specify a wait time before stopping a container. 10 seconds is the default value, which is supposed to be enough for the container to gracefully stop. To stop the container in a more brutal way, you can execute the following command:
+
+$ docker kill CONTAINER [CONTAINER...]
+
+
+docker stop: The main process inside the container will first receive a SIGTERM and, after a grace period, a SIGKILL
+docker kill: The main process inside the container will be sent SIGKILL(by default) or any signal specified with –signal
+
+
+
+alpine apk
+debian apt
