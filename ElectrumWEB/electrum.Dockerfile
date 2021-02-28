@@ -1,6 +1,6 @@
 # FROM ubuntu:20.04
-FROM debian:stable-slim
-# FROM alpine:3.12
+# FROM debian:stable-slim
+FROM alpine:3.12
 
 
 
@@ -8,8 +8,9 @@ FROM debian:stable-slim
 ENV TZ=Europe/Paris
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # RUN apk add --no-cache --update && apk -y openssh-server vim python3 net-tools telnet python3-pip
+RUN apk add --update && apk -y openssh-server vim python3 net-tools telnet python3-pip
 
-RUN  apt-get update -y && apt-get install -y openssh-server vim python net-tools telnet python3-pip
+# RUN  apt-get update -y && apt-get install -y openssh-server vim python net-tools telnet python3-pip
 
 
 
@@ -38,7 +39,7 @@ WORKDIR /var/www/html2/webcodes
 #run to be done by ansible of Python start
 # RUN pip install --upgrade pip
 # RUN cd /var/www/html2 && ls
-RUN cat requirements.txt 
+# RUN cat requirements.txt 
 RUN pip3 install -r requirements.txt 
 
 RUN python3 main.py --address='0.0.0.0' 
