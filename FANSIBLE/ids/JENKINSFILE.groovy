@@ -52,7 +52,7 @@ def myAnsiblelaunch(giturl, gitprojectname, playbookdir, playbook, parameters){
 
 
     //def sshgit = 'gitssh'
-    //git credentialsId: sshgit, url: giturl, branch: 'master'
+    //git credentialsId: sshgit, url: giturl, branch: 'main'
             bat 'wmic computersystem get name'
             bat 'bash'
             sh "clone ${giturl} && cd ${gitprojectname}"
