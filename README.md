@@ -9,7 +9,7 @@ PATH C:\setup_ids\git\bin
 
 mkdir -p C/work_ids/ && git clone https://github.com/amineAUPEC/zeIDS.git
 
-
+git config --global user.email $TON_EMAIL
 
 # install docker-> jenkins
 # install docker-> ansible
