@@ -7,7 +7,7 @@ ZeIDS of Vitry
 # configure git bash env
 PATH C:\setup_ids\git\bin
 
-mkdir -p C/work_ids/ && git clone this repo
+mkdir -p C/work_ids/ && git clone https://github.com/amineAUPEC/zeIDS.git
 
 
 
