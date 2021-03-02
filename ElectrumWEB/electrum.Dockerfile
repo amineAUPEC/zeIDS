@@ -42,8 +42,9 @@ WORKDIR /var/www/html2/webcodes
 # RUN cat requirements.txt 
 RUN pip3 install -r requirements.txt 
 
-# RUN python3 main.py --address='0.0.0.0' 
+# RUN python3 main.py --address='0.0.0.0' && echo $?
 # à lancer sur le serveur
 
 #run to be done by ansible of Python end
 
+# 143-183

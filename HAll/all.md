@@ -50,3 +50,27 @@ EXPOSE qui permet de définir les ports d'écoute par défaut ;
 VOLUME qui permet de définir les volumes utilisables ;
 
 CMD qui permet de définir la commande par défaut lors de l’exécution de vos conteneurs Docker.
+
+
+sudo docker container ls -a
+ou
+
+sudo docker ps
+Afficher les conteneurs actifs
+
+sudo docker container ls
+Afficher les images disponibles
+
+sudo docker images
+Mettre en pause un conteneur
+
+sudo docker container stop <container_ID>
+Démarrer un conteneur en pause
+
+sudo docker container start <container_ID>
+Sauvegarder un conteneur en image
+
+COPY
+sudo docker commit <container_ID>
+https://kbremaud.fr/linux/installer-nginx-avec-docker-compose/
+Ports « XX:YY » : XX Indique les ports à rediriger de l’hôte physique vers les port YY du conteneur. En l’occurrence le port 80 pour Nginx
