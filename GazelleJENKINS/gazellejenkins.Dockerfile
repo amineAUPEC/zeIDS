@@ -1,4 +1,6 @@
-FROM 2.60.2-alpine
+# FROM 2.60.2-alpine
+FROM debian:stable-slim
+
 
 RUN apt-get update && apt-get install -y openssh-server vim python net-tools telnet python-pip
 
