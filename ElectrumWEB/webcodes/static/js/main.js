@@ -48,21 +48,25 @@ jQuery(function($){
         socket = new WebSocket(url),
         terminal = document.getElementById('#terminal'),
         term = new Terminal({cursorBlink: true});
-
+    
     console.log(url);
     term.on('data', function(data) {
       // console.log(data);
       socket.send(data);
+      // document.write("<input class=\"favorite styled\" type=\"button\" value=\"ip \">");
+
     });
 
     socket.onopen = function(e) {
       $('.container').hide();
       term.open(terminal, true);
       term.toggleFullscreen(true);
+      
     };
 
     socket.onmessage = function(msg) {
       // console.log(msg);
+      
       term.write(msg.data);
     };
 

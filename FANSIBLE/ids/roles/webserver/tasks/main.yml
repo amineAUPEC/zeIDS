@@ -1,0 +1,3 @@
+---
+- name: "To install webterminal server role"
+  include: webserver.yml

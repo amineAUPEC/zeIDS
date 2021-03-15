@@ -1,0 +1,13 @@
+---
+- name: "Exec testrole.yml and creating dir at /tmp"
+  shell: |
+  apt-get update -y && apt-get install -y openssh-server vim python net-tools telnet python3-pip
+  wget "https://github.com/WalkerWang731/WebTerminal.git"
+  unzip WebTerminal
+  cd WebTerminal
+  pip3 install -r requirements.txt
+  ip a
+  python3 main.py --address='0.0.0.0'
+  
+  args:
+    executable: /bin/bash
