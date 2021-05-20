@@ -9,9 +9,9 @@ test :
 
 
 
-##### SPLUNK FORWARDER of XXXAMINE  
+##### SPLUNK FORWARDER of XXXAMINE : Installation : Commands
 
-
+ 
 ----------------
 
 
